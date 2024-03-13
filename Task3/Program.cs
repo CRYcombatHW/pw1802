@@ -70,7 +70,7 @@ SELECT * FROM Storage
 ", connection);
 			command.ExecuteNonQuery();
 
-			SqlDataReader reader = command.ExecuteReader();
+			using SqlDataReader reader = command.ExecuteReader();
 			while (reader.Read()) {
 				WriteAll(reader);
 			}
@@ -82,7 +82,7 @@ SELECT DISTINCT {distinct} FROM Storage
 ", connection);
 			command.ExecuteNonQuery();
 
-			SqlDataReader reader = command.ExecuteReader();
+			using SqlDataReader reader = command.ExecuteReader();
 			while (reader.Read()) {
 				Console.WriteLine($"{reader[distinct]}");
 			}
@@ -101,7 +101,7 @@ WHERE {maxof} = (
 ", connection);
 			command.ExecuteNonQuery();
 
-			SqlDataReader reader = command.ExecuteReader();
+			using SqlDataReader reader = command.ExecuteReader();
 			while (reader.Read()) {
 				WriteAll(reader);
 			}
