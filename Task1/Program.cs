@@ -14,7 +14,6 @@ namespace Task1
 			}
 			catch (Exception x) {
 				Console.WriteLine("Cant connect");
-				Console.WriteLine(x);
 				return;
 			}
             Console.WriteLine("Connected succesfuly");
