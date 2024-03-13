@@ -26,6 +26,7 @@ IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'Stor
 
 CREATE TABLE Storage(
 	Id INT PRIMARY Key Identity(1, 1),
+	Name nvarchar(Max) NOT NULL,
 	Type nvarchar(Max) NOT NULL,
 	Provider nvarchar(Max) NOT NULL,
 	Quantity int NOT NULL,
